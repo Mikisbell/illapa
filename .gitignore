@@ -1,0 +1,96 @@
+# Python
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter / IPython
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+coverage.xml
+*.cover
+
+# LaTeX / pandoc build artifacts
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.out
+*.snm
+*.toc
+
+# Generated figures (regenerable from data/processed/)
+articles/figures/*.png
+articles/figures/*.pdf
+articles/figures/*.svg
+!articles/figures/.gitkeep
+
+# Raw data (large, regenerated locally)
+data/raw/
+data/downloads/
+
+# Secrets / credentials
+.env
+.env.local
+*.pem
+secrets/
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+logs/
+
+# OpenSeesPy diagnostic files
+opensees.log
+analysis.log
+
+# Local cache
+.cache/
+.rag/

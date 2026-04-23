@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it using the metadata below."
+type: software
+title: "openseespy-edu-peru: Open-Source Reproducible Earthquake-Engineering Lab"
+abstract: >-
+  A reproducible pipeline for undergraduate earthquake-engineering education
+  that integrates OpenSeesPy numerical modelling, Kanai-Tajimi synthetic
+  ground motions, NTE E.030-2018 Peruvian seismic code compliance, and
+  AI-ready structured outputs. Pedagogical framework for structural dynamics
+  courses in Latin American engineering programs.
+authors:
+  - alias: Mikisbell
+    website: "https://github.com/Mikisbell"
+repository-code: "https://github.com/Mikisbell/openseespy-edu-peru"
+url: "https://github.com/Mikisbell/openseespy-edu-peru"
+license: MIT
+version: 1.0.0-pending
+date-released: "2026-05-08"
+keywords:
+  - earthquake engineering
+  - structural dynamics
+  - OpenSeesPy
+  - NTE E.030
+  - Kanai-Tajimi
+  - reproducibility
+  - AI-ready dataset
+  - engineering education
+  - Peru
+  - Latin America
+  - incremental dynamic analysis
+  - pushover analysis
+  - fragility curve
+  - reinforced concrete
+references:
+  - type: article
+    authors:
+      - family-names: McKenna
+        given-names: Frank
+    title: "OpenSees: A Framework for Earthquake Engineering Simulation"
+    year: 2011
+    journal: "Computing in Science & Engineering"
+    volume: 13
+    issue: 4
+    doi: 10.1109/MCSE.2011.66
+  - type: article
+    authors:
+      - family-names: Arroyo
+        given-names: Orlando
+    title: "opseestools: A Python library to streamline OpenSeesPy workflows"
+    year: 2024
+    journal: "SoftwareX"
+    volume: 28
+    doi: 10.1016/j.softx.2024.101832
