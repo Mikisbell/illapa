@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Status: v1.0.0-pending](https://img.shields.io/badge/status-v1.0.0--pending-orange.svg)](CHANGELOG.md)
+[![Case Study](https://img.shields.io/badge/case%20study-LAICSEE%202026-blue)](https://huggingface.co/datasets/mikisbell/laicsee-2026)
 
 > ⚠️ **This repository is under active development.** The v1.0.0 release (scheduled for **2026-05-08**) will include a Zenodo-archived snapshot with a formal DOI. Until then, the code is provisional.
 
@@ -44,6 +45,10 @@ python tools/plot_figures.py --domain structural
 ```
 
 All figures and statistics are regenerated locally in the working directory (not shipped with the repo) and sealed with SHA-256 integrity hashes via `tools/generate_compute_manifest.py`.
+
+## Case Studies
+
+- **LAICSEE 2026** — Conference paper using this framework to demonstrate E.030-compliant seismic analysis of a 5-story RC building in Lima. [Dataset](https://huggingface.co/datasets/mikisbell/laicsee-2026) · [Paper repo](https://github.com/Mikisbell/laicsee-2026)
 
 ## Citation
 
