@@ -29,14 +29,41 @@ A reproducible pipeline that bridges classical nonlinear structural dynamics wit
 - A novel algorithmic contribution (the framework integrates existing methods; it does not invent them)
 - A classroom-validated pedagogy (N=1 at this release; classroom pilot planned for v1.1)
 
+## Prerequisites — Python 3.12 required
+
+**OpenSeesPy does not ship working wheels for Python 3.13 on Windows** (verified 2026-04-23). Installing `openseespy` under Python 3.13 on Windows *will* appear to succeed via `pip`, but importing it fails with:
+
+```
+RuntimeError: Failed to import openseespy on Windows:
+DLL load failed while importing opensees: The specified module could not be found.
+```
+
+Use **Python 3.12** for the full CLI pipeline. The web demo (`app/`) runs on 3.13 because it does not depend on OpenSeesPy.
+
+### Install Python 3.12 on Windows
+
+```powershell
+# Easiest — winget:
+winget install Python.Python.3.12
+
+# Or download installer: https://www.python.org/downloads/release/python-31210/
+# Make sure the Python Launcher (`py`) is installed (default checkbox).
+```
+
+Verify with `py -3.12 --version` → should print `Python 3.12.x`.
+
 ## Quick start
 
 ```bash
-# Requires Python 3.12 (OpenSeesPy is unstable on 3.13 Windows)
 git clone https://github.com/Mikisbell/illapa.git
 cd illapa
-python -m venv .venv
-source .venv/Scripts/activate  # Git Bash Windows, or .venv\Scripts\Activate.ps1 in PowerShell
+
+# Create the venv with Python 3.12 explicitly (NOT `python -m venv`, which picks 3.13):
+py -3.12 -m venv .venv
+source .venv/Scripts/activate   # Git Bash on Windows
+# .venv\Scripts\Activate.ps1    # PowerShell on Windows
+# source .venv/bin/activate     # macOS / Linux
+
 pip install -r requirements.txt
 
 # Run the full pipeline (approx. 75 seconds on a commodity laptop)
@@ -45,6 +72,14 @@ python examples/rc_5story_peru/run_pushover.py
 python examples/rc_5story_peru/run_ida.py
 python tools/plot_figures.py --domain structural
 ```
+
+### Sanity check
+
+```bash
+python -c "import openseespy.opensees as ops; ops.wipe(); print('OpenSeesPy OK')"
+```
+
+If this prints `OpenSeesPy OK`, the solver is working. If it raises `DLL load failed`, the venv was created with Python 3.13 — delete `.venv` and recreate it with `py -3.12 -m venv .venv`.
 
 All figures and statistics are regenerated locally in the working directory (not shipped with the repo) and sealed with SHA-256 integrity hashes via `tools/generate_compute_manifest.py`.
 
@@ -56,11 +91,18 @@ fragility curve pedagogically. The design system is Andean-inspired (terracotta 
 turquoise + obsidian on cream), not default Streamlit gray.
 
 ```bash
-pip install -r requirements.txt   # adds streamlit + plotly
+# Works on Python 3.12 AND 3.13 — the web demo does not depend on OpenSeesPy.
+pip install -r requirements-web.txt
 streamlit run app/main.py
 ```
 
 Then open `http://localhost:8501`. See [`app/README.md`](app/README.md) for details.
+
+> Why a separate `requirements-web.txt`? The pushover page uses a closed-form
+> bilinear ASCE 41-17 surrogate calibrated against the real OpenSeesPy paper
+> outputs — so the web demo runs on any Python 3.10+, including 3.13 where
+> OpenSeesPy currently has no wheels. The full framework (`requirements.txt`)
+> still requires Python 3.12 + OpenSeesPy for the CLI pipeline and IDA.
 
 ![Illapa web demo screenshot placeholder](app/assets/screenshot_placeholder.png)
 
