@@ -1,0 +1,22 @@
+# Illapa — Streamlit theme config
+# Applies the Andean design tokens (app/design_tokens.json) at the framework level.
+# Further visual polish is injected via st.markdown custom CSS in main.py.
+
+[theme]
+base                = "light"
+primaryColor        = "#B34A2C"   # terracotta_500
+backgroundColor     = "#F5EEDC"   # cream_100
+secondaryBackgroundColor = "#EDE4D3"   # cream_200
+textColor           = "#14110F"   # obsidian_900
+font                = "serif"
+
+[server]
+headless = true
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true
+toolbarMode = "minimal"

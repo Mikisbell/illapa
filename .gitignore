@@ -70,6 +70,10 @@ articles/
 # User-generated data (inputs + compute outputs, regenerated locally)
 # Framework does not ship data; users fetch PEER records and run examples.
 data/
+# Exception: the local web demo under app/data/ ships with the LAICSEE 2026
+# pre-computed fragility curve and pushover reference, so the Streamlit app
+# works out-of-the-box without requiring a full pipeline run.
+!app/data/
 
 # Secrets / credentials
 .env

@@ -48,6 +48,26 @@ python tools/plot_figures.py --domain structural
 
 All figures and statistics are regenerated locally in the working directory (not shipped with the repo) and sealed with SHA-256 integrity hashes via `tools/generate_compute_manifest.py`.
 
+## 🌐 Web Demo Local
+
+An interactive Streamlit app (**local-only**, no cloud deploy) is shipped under `app/`.
+It lets you explore the pushover curve with live sliders and read the LAICSEE 2026
+fragility curve pedagogically. The design system is Andean-inspired (terracotta +
+turquoise + obsidian on cream), not default Streamlit gray.
+
+```bash
+pip install -r requirements.txt   # adds streamlit + plotly
+streamlit run app/main.py
+```
+
+Then open `http://localhost:8501`. See [`app/README.md`](app/README.md) for details.
+
+![Illapa web demo screenshot placeholder](app/assets/screenshot_placeholder.png)
+
+> The screenshot will land here after v1.0.0 is tagged; until then, the image link
+> is intentionally unresolved so readers know the demo is the canonical source of
+> truth for visuals.
+
 ## Case Studies
 
 - **LAICSEE 2026** — Conference paper using this framework to demonstrate E.030-compliant seismic analysis of a 5-story RC building in Lima. [Dataset](https://huggingface.co/datasets/mikisbell/laicsee-2026) · [Paper repo](https://github.com/Mikisbell/laicsee-2026)

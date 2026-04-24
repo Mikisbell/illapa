@@ -17,3 +17,8 @@ pandas>=2.1,<3.0
 
 # Statistics (used by preflight_statistics.py in the extended framework).
 statsmodels>=0.14
+
+# Local web demo (app/) — Streamlit + Plotly.
+# Optional for the CLI pipeline; required only if you run `streamlit run app/main.py`.
+streamlit>=1.30
+plotly>=5.18
