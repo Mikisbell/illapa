@@ -1,4 +1,4 @@
-# openseespy-edu-peru
+# Illapa — Open-Source Reproducible Earthquake-Engineering Lab
 
 **Open-source reproducible earthquake-engineering lab for structural dynamics education — Peru-case (NTE E.030-2018).**
 
@@ -6,6 +6,8 @@
 [![Python 3.12](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/downloads/)
 [![Status: v1.0.0-pending](https://img.shields.io/badge/status-v1.0.0--pending-orange.svg)](CHANGELOG.md)
 [![Case Study](https://img.shields.io/badge/case%20study-LAICSEE%202026-blue)](https://huggingface.co/datasets/mikisbell/laicsee-2026)
+
+> Named after **Illapa** (*Qichwa*: the Inca deity of lightning, thunder, and earthquakes), this framework provides an open-source reproducible laboratory for earthquake engineering education — combining OpenSeesPy, Kanai-Tajimi synthetic ground motions, and full compliance with Peru's NTE E.030-2018 seismic code.
 
 > ⚠️ **This repository is under active development.** The v1.0.0 release (scheduled for **2026-05-08**) will include a Zenodo-archived snapshot with a formal DOI. Until then, the code is provisional.
 
@@ -31,8 +33,8 @@ A reproducible pipeline that bridges classical nonlinear structural dynamics wit
 
 ```bash
 # Requires Python 3.12 (OpenSeesPy is unstable on 3.13 Windows)
-git clone https://github.com/Mikisbell/openseespy-edu-peru.git
-cd openseespy-edu-peru
+git clone https://github.com/Mikisbell/illapa.git
+cd illapa
 python -m venv .venv
 source .venv/Scripts/activate  # Git Bash Windows, or .venv\Scripts\Activate.ps1 in PowerShell
 pip install -r requirements.txt
@@ -55,13 +57,13 @@ All figures and statistics are regenerated locally in the working directory (not
 If you use this framework in academic work, please cite both the paper that introduced it and this code release:
 
 ```bibtex
-@software{belico_openseespy_edu_peru_2026,
+@software{belico_illapa_2026,
   author = {TBD},
-  title = {{openseespy-edu-peru: Open-Source Reproducible Earthquake-Engineering Lab}},
+  title = {{Illapa: Open-Source Reproducible Earthquake-Engineering Lab}},
   year = {2026},
   version = {v1.0.0},
   doi = {10.5281/zenodo.PENDING},
-  url = {https://github.com/Mikisbell/openseespy-edu-peru},
+  url = {https://github.com/Mikisbell/illapa},
   license = {MIT}
 }
 ```

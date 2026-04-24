@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-tools/plot_figures.py — Figure pipeline for openseespy-edu-peru
+tools/plot_figures.py — Figure pipeline for illapa
 ===============================================================
 Generates numbered, publication-ready figures from `data/processed/cv_results.json`.
 All figures output to `articles/figures/` in both PDF and PNG format.
@@ -480,7 +480,7 @@ def list_figures():
 
 def main():
     parser = argparse.ArgumentParser(
-        description="openseespy-edu-peru Figure Pipeline"
+        description="illapa Figure Pipeline"
     )
     parser.add_argument(
         "--domain",

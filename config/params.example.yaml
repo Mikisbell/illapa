@@ -1,4 +1,4 @@
-# openseespy-edu-peru — SSOT template (config/params.example.yaml)
+# illapa — SSOT template (config/params.example.yaml)
 #
 # Copy this file to config/params.yaml and edit freely. The example runners
 # (examples/rc_5story_peru/*.py) read from config/params.yaml only.

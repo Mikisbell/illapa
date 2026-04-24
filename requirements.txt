@@ -1,4 +1,4 @@
-# openseespy-edu-peru — pinned runtime dependencies
+# illapa — pinned runtime dependencies
 #
 # OpenSeesPy is the core numerical engine. Version 3.6.0 is the last
 # release with stable Python 3.12 wheels on Windows; Python 3.13 is

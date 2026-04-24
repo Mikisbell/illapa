@@ -1,5 +1,5 @@
 {
-  "title": "openseespy-edu-peru: Open-Source Reproducible Earthquake-Engineering Lab",
+  "title": "Illapa: Open-Source Reproducible Earthquake-Engineering Lab",
   "description": "A reproducible pipeline for undergraduate earthquake-engineering education that integrates OpenSeesPy numerical modelling, Kanai-Tajimi synthetic ground motions, NTE E.030-2018 Peruvian seismic code compliance, and AI-ready structured outputs. Pedagogical framework for structural dynamics courses in Latin American engineering programs.",
   "upload_type": "software",
   "access_right": "open",
